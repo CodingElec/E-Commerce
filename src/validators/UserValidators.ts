@@ -114,7 +114,7 @@ export class UserValidators {
                         req.user = user;
                         return true;
                     } else {
-                        // throw new Error('No User Registered with such Email');
+                       
                         throw('No User Registered with such Email');
                     }
                 }).catch(e => {
