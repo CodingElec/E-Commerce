@@ -146,6 +146,7 @@ export class UserValidators {
             body('phone', 'Phone is required').isString(),
             body('email', 'Email is required').isEmail()
             .custom((email, {req}) => {
+                
                 return User.findOne({
                     email: email
                 }).then(user => {
