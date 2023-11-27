@@ -4,5 +4,5 @@ A fun side project building a E-commerce, like a delivery / restaurant APIs.
 
 Parking it after building User APIs and starting restaurant / location APIs.
 
-Mostly Typescript + MongoDB and Express. 
+Mostly Typescript + MongoDB and Node-Express. 
 
