@@ -16,7 +16,7 @@ Restaurants are your adm / restaurant controllers.
 Banners are a way to store the pictures I was going to use on the web app.
 Cities are all about geo location of a given restaurant.
 
-To run (you will need nodemon):
+To run:
 
 - on ./src/environments - add your mongoDB uri to  'db_uri:' on all environments.
 
