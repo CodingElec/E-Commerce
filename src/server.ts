@@ -4,6 +4,9 @@ import { getEnvironmentVariables } from './environments/environment';
 import UserRouter from './routers/UserRouter';
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
+import BannerRouter from './routers/BannerRouter';
+import CityRouter from './routers/CityRouter';
+import RestaurantRouter from './routers/RestaurantRouter';
 
 
 export class Server {
@@ -18,7 +21,7 @@ export class Server {
         this.handleErrors();
         
         
-    }
+    } 
 
     setConfigs(){
         this.connectMongoDB();
@@ -45,7 +48,11 @@ export class Server {
     }
     
     setRoutes() {
-        this.app.use('/api/user', UserRouter)  
+        this.app.use('/src/uploads', express.static('src/uploads'))
+        this.app.use('/api/user', UserRouter);
+        this.app.use('/api/banner', BannerRouter);
+        this.app.use('/api/city', CityRouter);
+        this.app.use('/api/restaurant', RestaurantRouter);
     }
 
     error404Handler() {

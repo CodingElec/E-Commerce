@@ -44,6 +44,7 @@ export class UserController {
             const payload = {
                 aud: user._id,
                 email: user.email,
+                type: user.type
                 
             }
             const token = UtilsJWT.jwtSign(payload);
@@ -87,7 +88,7 @@ export class UserController {
                     email: email,
                     verification_token: verification_token,
                     verification_token_time: {$gt: Date.now()},
-                    type:'user',
+                    // type:'user'||'admin',
                 },
                 {
                     email_verified:true,
@@ -156,6 +157,7 @@ export class UserController {
                 const payload = {
                     aud: user._id,
                     email: user.email,
+                    type: user.type
                     
                 }
                 const token = UtilsJWT.jwtSign(payload);
@@ -312,6 +314,7 @@ export class UserController {
             const payload = {
                 aud: user.aud,
                 email: updatedUser.email,
+                type: updatedUser.type
                 
             }
             const token = UtilsJWT.jwtSign(payload);

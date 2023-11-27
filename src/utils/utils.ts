@@ -1,7 +1,7 @@
 
 export class Utils {
     
-    public MAX_TOKEN_TIME = +60*1000*5*10;
+    public MAX_TOKEN_TIME = +60*1000*5*1000;
 
     static generateVerificationToken(digit:number=6){
 

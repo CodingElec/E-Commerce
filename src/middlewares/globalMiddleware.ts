@@ -30,6 +30,16 @@ export class GlobalMiddleWare {
         } catch(e) {
             next(e)
         }
-
     }
+
+    static  adminRole(req,res,next){
+       const user = req.user;            
+        if(user.type !== 'admin'){
+            req.errorStatus = 401;
+            next(new Error('You are an Unauthorised User'))
+        }            
+        next();
+    }
+
+    
 }

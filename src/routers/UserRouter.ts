@@ -20,7 +20,7 @@ class userRouter {
 
     getRoutes () {
                       
-        this.router.get('/test', UserController.test1, UserController.test2);
+      //  this.router.get('/test', UserController.test1, UserController.test2);
         //this.router.get('/send/verification/email',GlobalMiddleWare.auth, UserValidators.checkResetPasswordEmail(), UserController.resendVerificationEmail,GlobalMiddleWare.checkError);
         this.router.get('/send/verification/email',GlobalMiddleWare.auth, UserController.resendVerificationEmail);
         this.router.get('/login', UserValidators.login(),GlobalMiddleWare.checkError, UserController.login);

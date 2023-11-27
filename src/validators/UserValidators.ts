@@ -25,7 +25,7 @@ export class UserValidators {
             }),
             body('password', 'Password is required').isAlphanumeric()
                 .isLength({ min: 8, max: 20 })
-                .withMessage('Pasword must be between 8-20 characters'),
+                .withMessage('Password must be between 8-20 characters'),
             body('type', 'User role type is required').isString(),
             body('status', 'User status is required').isString(),
         ];
@@ -38,7 +38,6 @@ export class UserValidators {
     }
 
     static login() {
-       
         return [
             query('email', 'Email is required').isEmail()
             .custom((email, {req}) => {
@@ -114,7 +113,7 @@ export class UserValidators {
                         req.user = user;
                         return true;
                     } else {
-                       
+                        // throw new Error('No User Registered with such Email');
                         throw('No User Registered with such Email');
                     }
                 }).catch(e => {
@@ -146,7 +145,6 @@ export class UserValidators {
             body('phone', 'Phone is required').isString(),
             body('email', 'Email is required').isEmail()
             .custom((email, {req}) => {
-                
                 return User.findOne({
                     email: email
                 }).then(user => {
