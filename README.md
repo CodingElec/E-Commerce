@@ -1,6 +1,6 @@
 # Rest APIs for E-commerce & Food Delivery  
 
-A fun side project building an E-commerce, like a delivery/restaurant APIs.
+A side project building an E-commerce, the original idea was delivery/restaurant APIs.
 
 Parking is after building User APIs and starting restaurant/location APIs.
 
@@ -9,12 +9,12 @@ Mostly Typescript + MongoDB and Node-Express.
 check 
 ./src/models for swaggers.
 ./src/routers for the routes.
-./src/validators and ./src/controllers should give you a good north on how to make the calls to CRUD Users, Restaurants, Cities and Banners.
+./src/validators and ./src/controllers should give you a good north of how to make the calls to CRUD Users, Restaurants, Cities and Banners.
 
-Users are you normal app users.
-Restaurants are your adm / restaurant controllers.
+Users are your normal app users.
+Restaurant users are adm / restaurant controllers.
 Banners are a way to store the pictures I was going to use on the web app.
-Cities are all about geo location of a given restaurant.
+Cities are all about the geo location of a given restaurant for proximity search.
 
 To run:
 
