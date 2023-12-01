@@ -7,7 +7,7 @@ Parking is after building User APIs and starting restaurant/location APIs.
 Mostly Typescript + MongoDB and Node-Express. 
 
 check 
-./src/models for swaggers.
+./src/models for schemas.
 ./src/routers for the routes.
 ./src/validators and ./src/controllers should give you a good north of how to make the calls to CRUD Users, Restaurants, Cities and Banners.
 
